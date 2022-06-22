@@ -75,17 +75,12 @@ img{
 
 
 .container{
-    padding: 8rem 20rem 2rem;
     width: 100%;
-    max-width: 120rem;
-    height: 43rem;
-    /*display: grid;
-    grid-template-columns: repeat(auto-fit, minmax (150рх, 1fr));*/
-    display: grid;
-    gap: 2rem;
-    grid-auto-flow: dense;
-    grid-auto-rows: 22rem;
-    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    max-width: 180rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 .container .card{
     width: 33rem;
@@ -96,16 +91,19 @@ img{
     margin: 2rem;
     text-align: center;
     transition: all 0.25s;
+    background-color: whitesmoke;
 }
-
+.container .card .card_title{
+    margin: 0;
+    font-size: 2.8rem;
+}
+.container .card .card_info{
+    margin: 0 2rem;
+    font-size: 1.8rem;
+}
 .container .card:hover{
     transform: translateY(-15px);
     box-shadow: 0 1.2rem 1.6rem rgba(0, 0, 0, 0.2);
-}
-
-.container .card .img{
-    width: 33rem;
-    height: 22rem;
 }
 .container .card .card_title{
     font-weight: 600;
@@ -114,4 +112,13 @@ img{
     padding: 0 1rem;
     font-size: 1.6rem;
     font-weight: 300;
+}
+
+.card_buttons{
+    margin-top: 2rem;
+}
+#preview, #code{
+    background-color: black;
+    border-radius: 1.5rem;
+    margin: 1.5rem;
 }
