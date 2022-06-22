@@ -8,8 +8,110 @@ html{
 body{
     font-size: 1.6rem;
     line-height: 2;
+    background: linear-gradient(to right, #0f3443,  #34e89e);
+}
+
+/* Generals*/
+h1{
+    margin: 0;
+    font-size: 8rem;
+}
+h2{
+    margin: 0;
+    font-size: 6rem;
+}
+h4{
+    margin: 0;
+    font-size: 2.8rem;
+}
+a{
+    text-decoration: none;
+}
+p{
+    margin: 0;
+    font-size: 1.8rem;
+}
+.title{
+    display: inline-block;
+    position: relative;
+}
+.title::after,.title::before{
+    content: '';
+    position: absolute;
+    width: 12rem;
+    height: .4rem;
+    background-color: black;
+    top: 6.5rem;
+}
+.title::after{
+    left: -14rem;
+}
+.title::before{
+    right: -14rem;
+}
+img{
+    width: 100%;
+    
 }
 .course{
-    text-decoration: none;
     font-weight: bold;
 }    
+
+/* Header */
+.Introduction{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 8rem 20rem 2rem;
+    text-align: center;
+}
+
+/* Projects */
+.Projects{
+    text-align: center;
+}
+
+
+.container{
+    padding: 8rem 20rem 2rem;
+    width: 100%;
+    max-width: 120rem;
+    height: 43rem;
+    /*display: grid;
+    grid-template-columns: repeat(auto-fit, minmax (150рх, 1fr));*/
+    display: grid;
+    gap: 2rem;
+    grid-auto-flow: dense;
+    grid-auto-rows: 22rem;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+}
+.container .card{
+    width: 33rem;
+    height: 43rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 2rem;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.container .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 1.2rem 1.6rem rgba(0, 0, 0, 0.2);
+}
+
+.container .card .img{
+    width: 33rem;
+    height: 22rem;
+}
+.container .card .card_title{
+    font-weight: 600;
+}
+.container .card .card_info{
+    padding: 0 1rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
